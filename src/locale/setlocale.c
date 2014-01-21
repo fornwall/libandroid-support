@@ -31,8 +31,8 @@
 char *setlocale(int category, const char *locale) {
   static const char C_LOCALE_SETTING[] = "en_US.UTF-8";
   if (locale == 0) return C_LOCALE_SETTING;
-  // Only accept "", "C" or "POSIX", all equivalent on Android.
-  if (*locale && strcmp(locale, "C") && strcmp(locale, "POSIX") && strstr(locale, "UTF-8") == 0 && strstr(locale, "UTF8")) {
+  // Accept "", "C" or "POSIX" (all equivalent on Android) and any locale with UTF-8/UTF8 in it.
+  if (*locale && strcmp(locale, "C") && strcmp(locale, "POSIX") && strstr(locale, "UTF-8") == 0 && strstr(locale, "UTF8") == 0) {
     errno = EINVAL;
     return 0;
   }
