@@ -8,6 +8,11 @@ Makefile.in
 /aclocal.m4
 /compile
 /configure
+/config.guess
+/config.sub
 /depcomp
 /install-sh
 /missing
+
+# https://www.gnu.org/software/libtool
+/ltmain.sh
