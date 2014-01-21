@@ -10,6 +10,15 @@ has been made:
 - Return fixed locale instead of setting errno and returning NULL when the locale argument is NULL.
 - Accept locales containing "UTF-8" and "UTF8".
 
+The primary purpose of this library is to compile general unix/linux software. If installed with something like
+
+- ${SRC}/configure --prefix=arm-linux-androideabi --prefix=${PREFIX}
+- make install
+
+you are then able to compile a C program using something like:
+
+- arm-linux-androideabi-gcc -isystem ${PREFIX}/include/ myprog.c -L${PREFIX}/lib -landroid-support -o myprog
+
 Original README
 ==================
 This is a small library that extends the Android C library (Bionic),
