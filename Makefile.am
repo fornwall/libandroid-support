@@ -142,4 +142,3 @@ libandroid_support_la_SOURCES= \
     src/stdio/vfwprintf.c \
     src/stdlib_support.c \
     src/wchar_support.c
-
