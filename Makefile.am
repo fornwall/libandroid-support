@@ -1,9 +1,4 @@
-lib_LTLIBRARIES=libandroid-support.la
-
-libandroid_support_la_CFLAGS = -Os -ffunction-sections -fdata-sections
-libandroid_support_la_CPPFLAGS = -I$(top_srcdir)/include -Drestrict=__restrict__
-libandroid_support_la_LDFLAGS = -lm -Wl,--gc-sections -fno-asynchronous-unwind-tables -Wl,--strip-all -version-info 1:0:0
-libandroid_support_la_SOURCES= \
+include_HEADERS = \
     include/ctype.h \
     include/cuchar \
     include/errno.h \
@@ -22,7 +17,14 @@ libandroid_support_la_SOURCES= \
     include/uchar.h \
     include/wchar.h \
     include/wctype.h \
-    include/xlocale.h \
+    include/xlocale.h
+
+lib_LTLIBRARIES=libandroid-support.la
+libandroid_support_la_CFLAGS = -Os -ffunction-sections -fdata-sections
+libandroid_support_la_CPPFLAGS = -I$(top_srcdir)/include -Drestrict=__restrict__
+libandroid_support_la_LDFLAGS = -lm -Wl,--gc-sections -fno-asynchronous-unwind-tables -Wl,--strip-all -version-info 1:0:0
+libandroid_support_la_SOURCES= \
+    $(include_HEADERS) \
     src/locale/duplocale.c \
     src/locale/freelocale.c \
     src/locale/locale_impl.h \
