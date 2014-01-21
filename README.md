@@ -1,7 +1,8 @@
 libandroid-support
 ==================
 This is an Autotools-configured version of the android support library found
-in Android NDK, Revision 9c at $NDK/sources/android/support/.
+in Android NDK, Revision 9c at $NDK/sources/android/support/. See the original
+README below for what it provides.
 
 Modifications of `setlocale()` in [src/locale/setlocale.c](src/locale/setlocale.c)
 has been made:
@@ -15,7 +16,7 @@ Original README
 This is a small library that extends the Android C library (Bionic),
 by adding:
 
-- better wchar _ t support.
+- better wchar_t support.
 - long double functions (simple wrappers really, since 'long double' is
   equal to 'double' on Android).
 - multibyte support (using UTF-8 as the only supported multibyte encoding).
