@@ -11,12 +11,16 @@ has been made:
 - Return fixed locale instead of setting errno and returning NULL when the locale argument is NULL.
 - Accept locales containing "UTF-8" and "UTF8".
 
-The primary purpose of this library is to compile general unix/linux software. If installed with something like
+Also, [MB_LEN_MAX](include/machine/limits.h) and [MB_CUR_MAX](include/stdlib.h) has been defined to 4 instead of 1.
+
+The above changes may be viewed by diffing this library with $NDK/sources/android/support/.
+
+The primary purpose of this library is to compile general unix/linux software. When installed along the lines of
 
 - ${SRC}/configure --prefix=arm-linux-androideabi --prefix=${PREFIX}
 - make install
 
-you are then able to compile a C program using something like:
+a C program may be compiled to use support library using something like:
 
 - arm-linux-androideabi-gcc -isystem ${PREFIX}/include/ myprog.c -L${PREFIX}/lib -landroid-support -o myprog
 

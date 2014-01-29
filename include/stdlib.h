@@ -31,6 +31,9 @@
 #include_next <stdlib.h>
 #include <xlocale.h>
 
+#undef MB_CUR_MAX
+#define MB_CUR_MAX 4
+
 #ifdef __cplusplus
 extern "C" {
 #endif
