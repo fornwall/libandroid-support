@@ -29,6 +29,7 @@
 #define NDK_ANDROID_SUPPORT_LANGINFO_H
 
 #include <nl_types.h>
+#include <xlocale.h>
 
 #define _NL_ITEM(category,index)  (((category) << 10) | (index))
 
