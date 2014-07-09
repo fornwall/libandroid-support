@@ -1,17 +1,14 @@
 libandroid-support
 ==================
 This is an Autotools-configured version of the android support library found
-in Android NDK, Revision 9c at $NDK/sources/android/support/. See the original
+in Android NDK at $NDK/sources/android/support/. See the original
 README below for what it provides.
 
-Modifications of `setlocale()` in [src/locale/setlocale.c](src/locale/setlocale.c)
-has been made:
+Changes made:
 
-- Return "en_US.UTF-8" instead of "C" as fixed locale.
-- Return fixed locale instead of setting errno and returning NULL when the locale argument is NULL.
-- Accept locales containing "UTF-8" and "UTF8".
-
-Also, [MB_LEN_MAX](include/machine/limits.h) and [MB_CUR_MAX](include/stdlib.h) has been defined to 4 instead of 1.
+- [setlocale()](src/locale/setlocale.c): Return "en_US.UTF-8" instead of "C" as fixed locale.  Return fixed locale instead of setting errno and returning NULL when the locale argument is NULL. Accept locales containing "UTF-8" and "UTF8".
+- [MB_LEN_MAX](include/machine/limits.h) and [MB_CUR_MAX](include/stdlib.h) has been defined to 4 instead of 1.
+- Add [libintl.h](include/libintl.h) to provide gettext headers.
 
 The above changes may be viewed by diffing this library with $NDK/sources/android/support/.
 

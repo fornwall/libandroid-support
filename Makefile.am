@@ -5,6 +5,7 @@ pkginclude_HEADERS = \
     include/iconv.h \
     include/inttypes.h \
     include/langinfo.h \
+    include/libintl.h \
     include/locale.h \
     include/math.h \
     include/monetary.h \

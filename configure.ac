@@ -1,4 +1,4 @@
-AC_INIT([libandroid-support], [1.0.4], [fredrik@fornwall.net], [libandroid-support], [http://github.com/fornwall/libandroid-support])
+AC_INIT([libandroid-support], [1.0.5], [fredrik@fornwall.net], [libandroid-support], [http://github.com/fornwall/libandroid-support])
 
 AM_INIT_AUTOMAKE([1.10 no-define foreign subdir-objects])
 LT_INIT
