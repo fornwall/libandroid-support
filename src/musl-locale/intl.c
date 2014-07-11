@@ -65,3 +65,6 @@ char *bind_textdomain_codeset(const char *domainname, const char *codeset)
 	}
 	return NULL;
 }
+
+/* http://refspecs.linux-foundation.org/LSB_4.0.0/LSB-Core-generic/LSB-Core-generic/baselib--nl-msg-cat-cntr.html, used by neovim */
+int _nl_msg_cat_cntr;
